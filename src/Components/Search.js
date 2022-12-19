@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { STUDENTS } from "../studentsList";
+import Error from "./Error";
 // `joiningDate` && `validityDate` format "yyyy-mm-dd"
 
 function checkValidity(joiningDate, validityDate) {
@@ -13,7 +14,7 @@ function checkValidity(joiningDate, validityDate) {
 }
 
 
-function Search() {
+function Search(props) {
 
   const [student, setStudent] = useState({
     name: '',
@@ -48,11 +49,22 @@ function Search() {
 
   if(studentExist && joiningValidity) {
     // add student to resident list 
-
+    props.onSubmitBack({ 
+      type:'success',
+      data: student
+     });
 
   } else if (!studentExist) {
-      
-  } 
+     props.onSubmitBack({  
+      type:'error', 
+      data:`Sorry, ${student['name']} is not a verified student!`
+     });
+  } else {
+    props.onSubmitBack({ 
+      type:'error', 
+      data:`Sorry, ${student['name']}'s validity has Expired!`
+     });
+  }
 
 
     setStudent({
@@ -64,8 +76,6 @@ function Search() {
 
 
   return (
-    <>
-      <form onSubmit={formSubmitHandler}>
         <div className="my-50 layout-row align-items-end justify-content-end">
           <label htmlFor="studentName">
             Student Name:
@@ -94,15 +104,14 @@ function Search() {
             </div>
           </label>
           <button
-            type="submit"
+            type="button"
             data-testid="addBtn"
             className="small mb-0"
+            onClick={formSubmitHandler}
           >
             Add
           </button>
         </div>
-      </form>
-    </>
   );
 }
 

@@ -1,16 +1,54 @@
-<testsuites name="jest tests" tests="6" failures="0" time="1.83">
-  <testsuite name="Hacker Dormitory" errors="0" failures="0" skipped="0" timestamp="2022-07-11T14:01:38" time="1.83" tests="6">
-    <testcase classname="Hacker Dormitory should add valid students in Residents list" name="Hacker Dormitory should add valid students in Residents list" time="0.071">
+<testsuites name="jest tests" tests="6" failures="4" time="5.119">
+  <testsuite name="Hacker Dormitory" errors="0" failures="4" skipped="0" timestamp="2022-12-19T11:44:10" time="5.119" tests="6">
+    <testcase classname="Hacker Dormitory should add valid students in Residents list" name="Hacker Dormitory should add valid students in Residents list" time="0.046">
+      <failure>TypeError: Cannot read properties of undefined (reading &apos;textContent&apos;)
+    at Object.&lt;anonymous&gt; (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\src\App.test.js:39:29)
+    at Object.asyncJestTest (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
     </testcase>
-    <testcase classname="Hacker Dormitory should add valid students without case sensitivity" name="Hacker Dormitory should add valid students without case sensitivity" time="0.01">
+    <testcase classname="Hacker Dormitory should add valid students without case sensitivity" name="Hacker Dormitory should add valid students without case sensitivity" time="0.013">
+      <failure>TypeError: Cannot read properties of undefined (reading &apos;textContent&apos;)
+    at Object.&lt;anonymous&gt; (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\src\App.test.js:53:29)
+    at Object.asyncJestTest (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
     </testcase>
     <testcase classname="Hacker Dormitory should clear the input fields after adding a new student" name="Hacker Dormitory should clear the input fields after adding a new student" time="0.009">
     </testcase>
-    <testcase classname="Hacker Dormitory should show error on trying to add a student who is not in the list" name="Hacker Dormitory should show error on trying to add a student who is not in the list" time="0.011">
+    <testcase classname="Hacker Dormitory should show error on trying to add a student who is not in the list" name="Hacker Dormitory should show error on trying to add a student who is not in the list" time="0.013">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;Sorry, dam is not a verified student!&quot;
+Received: &quot;Sorry,  is not a verified student!&quot;
+    at Object.&lt;anonymous&gt; (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\src\App.test.js:75:31)
+    at Object.asyncJestTest (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
     </testcase>
     <testcase classname="Hacker Dormitory should show error on trying to add a student whose validity has expired" name="Hacker Dormitory should show error on trying to add a student whose validity has expired" time="0.009">
     </testcase>
-    <testcase classname="Hacker Dormitory should hold the correct list and error message after series of Students addition" name="Hacker Dormitory should hold the correct list and error message after series of Students addition" time="0.031">
+    <testcase classname="Hacker Dormitory should hold the correct list and error message after series of Students addition" name="Hacker Dormitory should hold the correct list and error message after series of Students addition" time="0.013">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;Sorry, Talisk&apos;s validity has Expired!&quot;
+Received: &quot;Sorry,  is not a verified student!&quot;
+    at Object.&lt;anonymous&gt; (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\src\App.test.js:101:31)
+    at Object.asyncJestTest (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at E:\programming_practise\ReactJs\HackerRank\HackerRank-Hacker-Dormitory-Solution\node_modules\jest-jasmine2\build\queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
     </testcase>
   </testsuite>
 </testsuites>
